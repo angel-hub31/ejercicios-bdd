@@ -11,6 +11,7 @@ edad int,
 curso varchar (50),
 fecha_registro varchar(10),
 
+
 constraint esstudiantes_pk primary key(id_estudiante)
 )
 

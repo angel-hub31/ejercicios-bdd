@@ -1,8 +1,8 @@
 
 
---eliminar tabal
+#eliminar tabal
 drop table esstudiantes;
---crear tabla
+#crear tabla
 create table esstudiantes(
 id_estudiante int,
 nombre varchar (50),
@@ -15,7 +15,7 @@ fecha_registro varchar(10),
 constraint esstudiantes_pk primary key(id_estudiante)
 )
 
---ingregar o insertar datos
+#ingregar o insertar datos
 
 insert into esstudiantes values (1,'Juan','Perez',20,'Programacion','2026-01-10','juan@gmail.com');
 insert into esstudiantes values (2,'Maria','Espinosa',21,'Programacion','2026-01-10','maria@gmail.com');
@@ -38,70 +38,70 @@ insert into esstudiantes values (18,'Ines','Tapia',48,'Derecho','2026-01-18','in
 insert into esstudiantes values (19,'Camila','Sanchez',18,'Base de Datos','2026-04-15','camila@gmail.com');
 insert into esstudiantes values (20,'Fernanda','Espinosa',19,'Fisca','2026-02-10','fernanda@gmail.com');
 
---mostrar todos los registros
+#mostrar todos los registros
 select * from esstudiantes;
---mostrar unicamente solo nombress y curso
+#mostrar unicamente solo nombress y curso
 select nombre, curso from esstudiantes;
---mostrar estudiantes mayores de 18 años
+#mostrar estudiantes mayores de 18 años
 select * from esstudiantes where edad>18;
---mostrar estudiantes entre 18 y 25 años
+#mostrar estudiantes entre 18 y 25 años
 select * from esstudiantes where edad between 18 and 25;
---mostrar estudiantes del curso de base de datos
+#mostrar estudiantes del curso de base de datos
 select * from esstudiantes where curso='Base de Datos';
---mostrar estudiantes registrados despues de 2026-03-01
+#mostrar estudiantes registrados despues de 2026-03-01
 select * from esstudiantes where fecha_registro>'2026-03-01';
---mostrar estudiantes registrados entre 2026-01-01 y 2026-04-30
+#mostrar estudiantes registrados entre 2026-01-01 y 2026-04-30
 select * from esstudiantes where fecha_registro between '2026-01-01' and '2026-04-30';
 
 
 select * from esstudiantes
---Update
+#Update
 
---actualizar o cambiar curso
+#actualizar o cambiar curso
 update esstudiantes set curso='Inteligencia Artificial' where id_estudiante=1;
---cambiar o actualizar edad
+#cambiar o actualizar edad
 update esstudiantes set edad=18 where id_estudiante=15;
---cambiar fecha
+#cambiar fecha
 update esstudiantes set fecha_registro='2026-03-16' where id_estudiante=2;
---cambiar varios campos al mismo tiempo
+#cambiar varios campos al mismo tiempo
 update esstudiantes set nombre='Maite' , apellido='Cruz', curso='Inteligencia Artificial', edad=20 where id_estudiante=3
---cambiamos apellido
+#cambiamos apellido
 update esstudiantes set apellido='Salazar' where id_estudiante=9;
 
----Delete
---Realizar 5 Delete diferentes
+#Delete
+#Realizar 5 Delete diferentes
 
---borramos del registroestudiante cuando el id=12
+#borramos del registroestudiante cuando el id=12
 delete from esstudiantes where id_estudiante=12;
---borramos por curso
+#borramos por curso
 delete  from esstudiantes where curso='Sociales'
---borramos por edad
+#borramos por edad
 delete  from esstudiantes where edad=62;
---borramos varios
+#borramos varios
 delete  from esstudiantes where edad BETWEEN 15 AND 18;
---borramos por apellido
+#borramos por apellido
 delete  from esstudiantes where apellido='Pilamunga';
 
 
 select * from esstudiantes
---Modificacion de la tabla
+#Modificacion de la tabla
 
 alter table esstudiantes add column correo varchar(100);
 
---update
---actualizar algunos update
+#update
+#actualizar algunos update
 update esstudiantes set correo='camila@hotmail.com' where id_estudiante=19;
 update esstudiantes set correo='fernanda@hotmail.com' where id_estudiante=20;
 update esstudiantes set correo='hancel@hotmail.com' where id_estudiante=15;
 
 
---select
---actualiza algunas select
+#select
+#actualiza algunas select
 select correo,edad from esstudiantes where edad>18;
 select  correo,edad from esstudiantes where edad between 18 and 25;
 select  correo,curso from esstudiantes where curso='Base de Datos';
 
---consulta con fechas
+#consulta con fechas
 select fecha_registro,nombre from esstudiantes where fecha_registro>'2026-02-01';
 select fecha_registro,nombre from esstudiantes where fecha_registro<'2026-05-01';
 select fecha_registro,nombre from esstudiantes where fecha_registro between '2026-02-01' and '2026-03-01';

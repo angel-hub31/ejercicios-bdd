@@ -67,6 +67,20 @@ update esstudiantes set nombre='Maite' , apellido='Cruz', curso='Inteligencia Ar
 --cambiamos apellido
 update esstudiantes set apellido='Salazar' where id_estudiante=9;
 
+---Delete
+--Realizar 5 Delete diferentes
+
+--borramos del registroestudiante cuando el id=12
+delete from esstudiantes where id_estudiante=12;
+--borramos por curso
+delete  from esstudiantes where curso='Sociales'
+--borramos por edad
+delete  from esstudiantes where edad=62;
+--borramos varios
+delete  from esstudiantes where edad BETWEEN 15 AND 18;
+--borramos por apellido
+delete  from esstudiantes where apellido='Pilamunga';
+
 
 
 

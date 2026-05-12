@@ -53,6 +53,21 @@ select * from esstudiantes where fecha_registro>'2026-03-01';
 select * from esstudiantes where fecha_registro between '2026-01-01' and '2026-04-30';
 
 
+select * from esstudiantes
+--Update
+
+--actualizar o cambiar curso
+update esstudiantes set curso='Inteligencia Artificial' where id_estudiante=1;
+--cambiar o actualizar edad
+update esstudiantes set edad=18 where id_estudiante=15;
+--cambiar fecha
+update esstudiantes set fecha_registro='2026-03-16' where id_estudiante=2;
+--cambiar varios campos al mismo tiempo
+update esstudiantes set nombre='Maite' , apellido='Cruz', curso='Inteligencia Artificial', edad=20 where id_estudiante=3
+--cambiamos apellido
+update esstudiantes set apellido='Salazar' where id_estudiante=9;
+
+
 
 
 

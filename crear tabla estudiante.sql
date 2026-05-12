@@ -88,5 +88,7 @@ select * from esstudiantes
 
 alter table esstudiantes add column correo varchar(100);
 
+--
+
 
 

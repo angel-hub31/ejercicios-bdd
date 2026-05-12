@@ -88,7 +88,29 @@ select * from esstudiantes
 
 alter table esstudiantes add column correo varchar(100);
 
---
+--update
+--actualizar algunos update
+update esstudiantes set correo='camila@hotmail.com' where id_estudiante=19;
+update esstudiantes set correo='fernanda@hotmail.com' where id_estudiante=20;
+update esstudiantes set correo='hancel@hotmail.com' where id_estudiante=15;
+
+
+--select
+--actualiza algunas select
+select correo,edad from esstudiantes where edad>18;
+select  correo,edad from esstudiantes where edad between 18 and 25;
+select  correo,curso from esstudiantes where curso='Base de Datos';
+
+--consulta con fechas
+select fecha_registro,nombre from esstudiantes where fecha_registro>'2026-02-01';
+select fecha_registro,nombre from esstudiantes where fecha_registro<'2026-05-01';
+select fecha_registro,nombre from esstudiantes where fecha_registro between '2026-02-01' and '2026-03-01';
+select fecha_registro,nombre from esstudiantes where fecha_registro='2026-03-15';
+select nombre, curso from esstudiantes where curso='Programacion' and fecha_registro>'2026-01-01';
+
+
+
+
 
 
 

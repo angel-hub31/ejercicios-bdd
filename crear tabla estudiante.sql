@@ -43,3 +43,5 @@ select * from esstudiantes;
 select nombre, curso from esstudiantes;
 --mostrar estudiantes mayores de 18 años
 select * from esstudiantes where edad>18;
+--mostrar estudiantes entre 18 y 25 años
+select * from esstudiantes where edad between 18 and 25;

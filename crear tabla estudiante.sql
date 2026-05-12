@@ -49,3 +49,12 @@ select * from esstudiantes where edad between 18 and 25;
 select * from esstudiantes where curso='Base de Datos';
 --mostrar estudiantes registrados despues de 2026-03-01
 select * from esstudiantes where fecha_registro>'2026-03-01';
+--mostrar estudiantes registrados entre 2026-01-01 y 2026-04-30
+select * from esstudiantes where fecha_registro between '2026-01-01' and '2026-04-30';
+
+
+
+
+
+
+

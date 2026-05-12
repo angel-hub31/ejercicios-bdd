@@ -38,3 +38,6 @@ insert into esstudiantes values (19,'Camila','Sanchez',18,'Base de Datos','2026-
 insert into esstudiantes values (20,'Fernanda','Espinosa',19,'Fisca','2026-02-10');
 
 --mostrar todos los registros
+select * from esstudiantes;
+--mostrar unicamente solo nombress y curso
+select nombre, curso from esstudiantes;

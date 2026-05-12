@@ -83,8 +83,10 @@ delete  from esstudiantes where edad BETWEEN 15 AND 18;
 delete  from esstudiantes where apellido='Pilamunga';
 
 
+select * from esstudiantes
+--Modificacion de la tabla
 
-
+alter table esstudiantes add column correo varchar(100);
 
 
 
